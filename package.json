@@ -1,0 +1,61 @@
+{
+    "name": "lila-ai-demo",
+    "version": "0.1.0",
+    "private": true,
+    "license": "MIT",
+    "author": "VanceDenson",
+    "type": "module",
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "type-check": "tsc --noEmit",
+        "lint": "eslint --ignore-path .gitignore \"**/*.+(ts|js|tsx)\"",
+        "format": "prettier --ignore-path .gitignore \"**/*.+(ts|js|tsx)\" --write",
+        "scrape-embed": "tsx -r dotenv/config scripts/scrape-embed.ts",
+        "ingestAllTypes": "tsx -r dotenv/config scripts/ingest-data.ts",
+        "testDSM": "tsx -r dotenv/config scripts/pdf-query.ts",
+        "testWeb": "tsx -r dotenv/config scripts/demo-query.ts"
+    },
+    "dependencies": {
+        "@microsoft/fetch-event-source": "^2.0.1",
+        "@radix-ui/react-accordion": "^1.1.1",
+        "@supabase/supabase-js": "^2.10.0",
+        "add": "^2.0.6",
+        "clsx": "^1.2.1",
+        "d3-dsv": "^2.0.0",
+        "dotenv": "^16.0.3",
+        "framer-motion": "^10.12.10",
+        "langchain": "^0.0.75",
+        "lucide-react": "^0.216.0",
+        "mammoth": "^1.5.1",
+        "next": "13.2.3",
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
+        "react-markdown": "^8.0.5",
+        "srt-parser-2": "^1.2.2",
+        "tailwind-merge": "^1.10.0"
+    },
+    "devDependencies": {
+        "@types/node": "^18.14.6",
+        "@types/react": "^18.0.28",
+        "@types/react-dom": "^18.0.11",
+        "@typescript-eslint/parser": "^5.54.0",
+        "autoprefixer": "^10.4.13",
+        "eslint": "8.35.0",
+        "eslint-config-next": "13.2.3",
+        "postcss": "^8.4.21",
+        "prettier": "^2.8.4",
+        "tailwindcss": "^3.2.7",
+        "tsx": "^3.12.3",
+        "typescript": "^4.9.5"
+    },
+    "keywords": [
+        "starter",
+        "notion",
+        "typescript",
+        "nextjs",
+        "langchain",
+        "openai"
+    ]
+}
