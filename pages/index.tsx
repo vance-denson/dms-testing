@@ -54,7 +54,7 @@ export const ChatDSM = ({ onClick }) => {
         messages: [
             {
                 message: `Hello, I'm the DSM Doc! Ask any question about the DSM. If you would like me to diagnose a conversation please type\n:
-                \"Analyze the following coversation between doctor and patient and provide a patient diagnosis\", or something similar followed by the conversation!
+                \"Analyze the following conversation between doctor and patient and provide a patient diagnosis\", or something similar followed by the conversation!
                 `,
                 type: 'apiMessage',
             },
@@ -275,8 +275,7 @@ export const ChatDSM = ({ onClick }) => {
                                     onKeyDown={handleEnter}
                                     ref={textAreaRef}
                                     autoFocus={false}
-                                    rows={1}
-                                    maxLength={512}
+                                    rows={10}
                                     id="userInput"
                                     name="userInput"
                                     placeholder={loading ? 'Waiting for response...' : `${uiState.chatPlaceholder}`}
