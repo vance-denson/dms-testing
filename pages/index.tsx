@@ -53,10 +53,7 @@ export const ChatDSM = ({ onClick }) => {
     }>({
         messages: [
             {
-                message: `Hello, welcome to chatDSM! Ask any question about the DSM-5 and WHODAS 2.0. If you would like me to diagnose a conversation please type\n:
-                "Based on the following conversation between a patient and psychiatrist provide all suspected diagnosis.
-                Think step by step and map criteria in a detailed diagnosis.
-                Review your answer and add additional suspected diagnosis." \nfollowed by the conversation.`,
+                message: 'Welcome! Enter your patient conversation below for suggested diagnosis with references:',
                 type: 'apiMessage',
             },
         ],
