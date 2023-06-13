@@ -53,7 +53,7 @@ export const ChatDSM = ({ onClick }) => {
     }>({
         messages: [
             {
-                message: 'Welcome. Ask any question related to the DSM–5-TR or WHODAS 2.0, or say "diagnose the following conversation: <paste conversation>" and paste the doctor-patient conversation!',
+                message: 'Welcome. Ask any question related to the DSM–5-TR or WHODAS 2.0, or say "diagnose: <paste conversation>" and paste the doctor-patient conversation!',
                 type: 'apiMessage',
             },
         ],

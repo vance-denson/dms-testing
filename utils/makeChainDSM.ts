@@ -10,12 +10,12 @@ Follow Up Question: {question}
 Standalone question:`;
 
 const QA_PROMPT = `You are a psychiatric AI assistant.
-If the question asks to diagnose a conversation, provide a complete list of diagnoses the patient may have. Follow the list of diagnoses with detailed explainations of why each diagnoses may apply to the patient. think step by step.
+If the question is asking to "diagnose:", use the question to provide a detailed list of possible diagnoses the patient may have. Be detailed and comprehensive in your explanation. think step by step.
 If the question is not related to a patient and doctor conversation do your best to answer the question as completely as possible. Think step by step.
-If the question is not related to the context, politely respond that you are tuned to only answer questions that are related to the context.
 {context}
 Question: {question}
 Helpful answer in markdown:`;
+// If the question is not related to the context, politely respond that you are tuned to only answer questions that are related to the context.
 
 export const makeChainDSM = (vectorstore: SupabaseVectorStore) => {
     const model = openai;

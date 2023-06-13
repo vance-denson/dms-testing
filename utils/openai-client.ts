@@ -8,7 +8,7 @@ if (!process.env.OPENAI_API_KEY) {
 
 export const openai = new OpenAI({
     openAIApiKey: process.env.OPENAI_API_KEY,
-    // modelName: 'gpt-3.5-turbo',
+    modelName: 'gpt-3.5-turbo',
     temperature: 0.1,
     verbose: true,
 });
