@@ -4,18 +4,15 @@ import { ConversationalRetrievalQAChain } from 'langchain/chains';
 import { openai } from '@/utils/openai-client';
 
 const CONDENSE_PROMPT = `Given the following conversation and a follow up question, rephrase the follow up question to be a standalone question.
-Chat History:
+Conversation:
 {chat_history}
-Follow Up Input: {question}
+Follow Up Question: {question}
 Standalone question:`;
 
-const QA_PROMPT = `If the question is not related to the context, politely respond that you are tuned to only answer questions that are related to the context.
-You are an AI assistant and an expert on Disability Support Pension (DSP) and National Disability Insurance Scheme (NDIS).
-You are an expert on the DSM-5 Text Revision, WHODAS 2.0, and DSP Impairment Tables and Instructions.
-You are to assist psychologists and psychiatrists to formulate possible diagnosis.
-Use the following pieces of context to answer the question at the end.
-Based on the following conversation between a patient and psychiatrist provide all suspected diagnosis. Think step by step and map criteria in a detailed diagnosis.
-Review your answer and add additional suspected diagnosis.
+const QA_PROMPT = `You are a psychiatric AI assistant.
+If question asks to diagnose a conversation, provide a detailed summarization of possible diagnoses the patient may have with detailed explainations. Use bullet pointed format wherever applicable and heading tags.
+If the question is not related to a patient and doctor conversation do your best to answer the question as completely as possible. Think step by step.
+If the question is not related to the context, politely respond that you are tuned to only answer questions that are related to the context.
 {context}
 Question: {question}
 Helpful answer in markdown:`;

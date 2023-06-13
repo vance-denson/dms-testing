@@ -53,7 +53,7 @@ export const ChatDSM = ({ onClick }) => {
     }>({
         messages: [
             {
-                message: 'Welcome! Enter your patient conversation below for suggested diagnosis with references:',
+                message: 'Welcome. Ask any question, or say "diagnose the following converstaion:" and paste the doctor-patient conversation!',
                 type: 'apiMessage',
             },
         ],
@@ -305,9 +305,8 @@ export const ChatDSM = ({ onClick }) => {
                     initial={{ opacity: 0, scale: 0.1, y: 200 }}
                     animate={{ opacity: 1, scale: 1, y: 0 }}
                     style={{ maxHeight: 600 }}
-                    className={`${
-                        messages.length > 1 && openSources ? null : 'hidden'
-                    } z-20 relative top-0 bottom-0 justify-center overflow-y-scroll md:mx-10 bg-white border-black border-2 border-opacity-30 rounded-xl h-full md:px-10 md:py-10`}
+                    className={`${messages.length > 1 && openSources ? null : 'hidden'
+                        } z-20 relative top-0 bottom-0 justify-center overflow-y-scroll md:mx-10 bg-white border-black border-2 border-opacity-30 rounded-xl h-full md:px-10 md:py-10`}
                 >
                     <div className="w-full flex text-center items-center">
                         <button
